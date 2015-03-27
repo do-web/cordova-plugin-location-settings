@@ -4,8 +4,8 @@
     <description>Cordova Settings Plugin</description>
     <license></license>
     <keywords>cordova,settings</keywords>
-    <repo>https://github.com/do-web/cordova-plugin-settings</repo>
-    <issue>https://github.com/do-web/cordova-plugin-settings/issues</issue>
+    <repo>https://github.com/do-web/cordova-plugin-location-settings</repo>
+    <issue>https://github.com/do-web/cordova-plugin-location-settings/issues</issue>
 
     <js-module src="www/settings.js" name="Settings">
         <clobbers target="cordova.plugins.settings" />
@@ -21,7 +21,6 @@
         <source-file src="src/ios/CDVSettings.m" />
     </platform>
 
-    <!-- Android -->
     <platform name="android">
         <source-file src="src/android/Settings.java" target-dir="src/com/doweb/cordova/settings" />
 
