@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.plugins.doweb.settings" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>Settings</name>
+    <description>Cordova Settings Plugin</description>
+    <license></license>
+    <keywords>cordova,settings</keywords>
+    <repo>https://github.com/do-web/cordova-plugin-settings</repo>
+    <issue>https://github.com/do-web/cordova-plugin-settings/issues</issue>
+
+    <js-module src="www/settings.js" name="Settings">
+        <clobbers target="cordova.plugins.settings" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Settings">
+                <param name="ios-package" value="CDVSettings"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVSettings.h" />
+        <source-file src="src/ios/CDVSettings.m" />
+    </platform>
+
+    <!-- Android -->
+    <platform name="android">
+        <source-file src="src/android/Settings.java" target-dir="src/com/doweb/cordova/settings" />
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Settings">
+                <param name="android-package" value="com.doweb.cordova.settings.Settings" />
+            </feature>
+        </config-file>
+    </platform>
+
+</plugin>
